@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "talentisos-sync",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-11",
+  "observability": { "enabled": true },
+  "vars": {
+    "APP_ORIGIN": "https://n365mr.github.io/TalentisOS-X",
+    "GITHUB_DATA_REPO": "N365MR/TalentisOS-X-data"
+  },
+  "secrets": {
+    "required": ["GITHUB_CLIENT_ID", "GITHUB_CLIENT_SECRET", "SESSION_SECRET"]
+  }
+}

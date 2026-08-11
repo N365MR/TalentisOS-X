@@ -448,6 +448,8 @@ to{opacity:1;transform:none}
 .eod-timeline-points strong{color:var(--secondary);font-size:12px}
 .eod-timeline-points span{color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
 @media(max-width:600px){.eod-history-heading{align-items:flex-start;flex-direction:column}.eod-timeline-points div{grid-template-columns:1fr;gap:3px}}
+.huddle-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+@media(max-width:700px){.huddle-actions{justify-content:flex-start;margin-top:16px}}
 .snapshot-row .text-link,.snapshot-row .delete-link{align-self:center;margin:0;padding:0;line-height:1.5}
 .snapshot-row .delete-link{display:block;min-width:0;height:auto;border:0;border-radius:0;background:transparent;color:var(--danger);font-size:0;font-weight:400;transition:color .2s ease,transform .2s ease}
 .snapshot-row .delete-link::before{content:"Delete";display:inline;width:auto;height:auto;background:none;color:inherit;font-size:14px;font-weight:inherit;line-height:inherit;mask:none;-webkit-mask:none}

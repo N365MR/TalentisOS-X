@@ -432,6 +432,22 @@ to{opacity:1;transform:none}
 .restore-notice b{color:var(--text)}
 .info-modal-copy{margin:0;color:var(--secondary);font-size:16px;line-height:1.5}
 .info-modal .modal-actions{justify-content:flex-end;margin-top:24px}
+.eod-history{margin-top:34px;padding-top:30px;border-top:1px solid var(--border)}
+.eod-history-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}
+.eod-history-heading .section-title{margin:0}
+.eod-history-empty{padding:22px;border:1px dashed var(--border);border-radius:14px;color:var(--muted);background:var(--surface)}
+.eod-timeline{position:relative;display:grid;gap:16px;padding-left:22px}
+.eod-timeline::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.eod-timeline-item{position:relative}
+.eod-timeline-marker{position:absolute;left:-22px;top:18px;width:11px;height:11px;border:3px solid var(--bg);border-radius:50%;background:var(--teal);box-shadow:0 0 0 1px var(--teal)}
+.eod-timeline-card{padding:18px 20px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}
+.eod-timeline-meta{color:var(--teal);font:11px "SFMono-Regular","Roboto Mono",ui-monospace,monospace;letter-spacing:.04em}
+.eod-timeline-card h3{margin:7px 0 12px;font-size:18px}
+.eod-timeline-points{display:grid;gap:9px}
+.eod-timeline-points div{display:grid;grid-template-columns:105px 1fr;gap:12px;padding-top:9px;border-top:1px solid color-mix(in srgb,var(--border) 70%,transparent)}
+.eod-timeline-points strong{color:var(--secondary);font-size:12px}
+.eod-timeline-points span{color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:600px){.eod-history-heading{align-items:flex-start;flex-direction:column}.eod-timeline-points div{grid-template-columns:1fr;gap:3px}}
 .snapshot-row .text-link,.snapshot-row .delete-link{align-self:center;margin:0;padding:0;line-height:1.5}
 .snapshot-row .delete-link{display:block;min-width:0;height:auto;border:0;border-radius:0;background:transparent;color:var(--danger);font-size:0;font-weight:400;transition:color .2s ease,transform .2s ease}
 .snapshot-row .delete-link::before{content:"Delete";display:inline;width:auto;height:auto;background:none;color:inherit;font-size:14px;font-weight:inherit;line-height:inherit;mask:none;-webkit-mask:none}

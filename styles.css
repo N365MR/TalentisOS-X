@@ -443,6 +443,7 @@ to{opacity:1;transform:none}
 .eod-timeline-card{padding:18px 20px;border:1px solid var(--border);border-radius:16px;background:var(--surface)}
 .eod-timeline-meta{color:var(--teal);font:11px "SFMono-Regular","Roboto Mono",ui-monospace,monospace;letter-spacing:.04em}
 .eod-timeline-card h3{margin:7px 0 12px;font-size:18px}
+.eod-timeline-title{display:flex;align-items:center;justify-content:space-between;gap:14px}.eod-timeline-title h3{margin:7px 0 12px}
 .eod-timeline-points{display:grid;gap:9px}
 .eod-timeline-points div{display:grid;grid-template-columns:105px 1fr;gap:12px;padding-top:9px;border-top:1px solid color-mix(in srgb,var(--border) 70%,transparent)}
 .eod-timeline-points strong{color:var(--secondary);font-size:12px}

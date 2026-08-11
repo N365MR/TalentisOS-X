@@ -432,3 +432,6 @@ to{opacity:1;transform:none}
 .restore-notice b{color:var(--text)}
 .info-modal-copy{margin:0;color:var(--secondary);font-size:16px;line-height:1.5}
 .info-modal .modal-actions{justify-content:flex-end;margin-top:24px}
+.snapshot-row .delete-link{display:grid;place-items:center;width:44px;height:44px;padding:0;margin:0;border:1px solid color-mix(in srgb,var(--danger) 38%,var(--border));border-radius:12px;background:color-mix(in srgb,var(--danger) 8%,var(--surface));font-size:0;line-height:1;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.snapshot-row .delete-link::before{content:"\1F5D1";font-size:22px;line-height:1;color:var(--danger)}
+.snapshot-row .delete-link:hover{background:color-mix(in srgb,var(--danger) 16%,var(--surface));border-color:var(--danger);transform:translateY(-1px)}

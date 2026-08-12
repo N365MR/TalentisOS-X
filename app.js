@@ -76,7 +76,7 @@ sidebar?.setAttribute('id','primary-navigation');
 sidebar?.addEventListener('click',event=>{if(event.target.closest('[data-view]'))setMobileMenu(false)});
 document.addEventListener('click',event=>{if(sidebar?.classList.contains('open')&&!sidebar.contains(event.target)&&!mobileMenu?.contains(event.target))setMobileMenu(false)});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')setMobileMenu(false)});
-window.addEventListener('resize',()=>{if(window.innerWidth>800)setMobileMenu(false)},{passive:true});
+window.addEventListener('resize',()=>{if(window.innerWidth>1024)setMobileMenu(false)},{passive:true});
 document.querySelector('#help-button').onclick=()=>guideModal();document.querySelector('#scroll-top').onclick=()=>window.scrollTo({top:0,behavior:'smooth'});document.querySelector('#scroll-bottom').onclick=()=>window.scrollTo({top:document.documentElement.scrollHeight,behavior:'smooth'});
 ;(async()=>{state=await load();applyAppearance(state.settings?.appearance||'dark');render()})();
 

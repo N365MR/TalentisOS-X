@@ -95,7 +95,7 @@ button{cursor:pointer}
 .menu-open{overflow:hidden}
 .menu-open::after{content:"";position:fixed;z-index:35;inset:0;background:#0008;backdrop-filter:blur(3px)}
 .topbar{position:relative;z-index:45}
-.icon-button{display:block}
+.icon-button{display:flex!important;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;padding:0;position:relative;z-index:46}
 .topbar{padding:0 20px}
 .view{padding:30px 20px 60px}
 .hero{display:block}

@@ -53,7 +53,7 @@ button{cursor:pointer}
 .check{width:19px;height:19px;border:1px solid #4b5a68;border-radius:6px;background:transparent;color:#071014;display:grid;place-items:center;flex-shrink:0}
 .check.done{background:var(--teal);border-color:var(--teal)}
 .task-copy{flex:1;min-width:0}
-.task-copy strong{display:block;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.task-copy strong{display:block;font-size:13px;font-weight:600;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
 .task-copy small{color:var(--muted)}
 .task-due{font-size:11px;color:var(--secondary)}
 .task-due.overdue{color:var(--danger)}

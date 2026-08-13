@@ -7,6 +7,7 @@ const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8
 assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings'/s);
 assert.match(app, /function importEodToHuddle\(\)/);
 assert.match(app, /workflowKey=`eod:/);
+assert.match(app, /label==='Top 3'&&item.title===line/);
 assert.match(app, /Moved to Today’s Work/);
 assert.match(app, /event==='Completed'/);
 assert.match(app, /function syncHuddleToToday\(\).*Moved to Today’s Work/s);

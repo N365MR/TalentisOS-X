@@ -11,6 +11,8 @@ assert.match(app, /Moved to Today’s Work/);
 assert.match(app, /event==='Completed'/);
 assert.match(app, /aria-current=/);
 assert.match(app, /routeFromHash\(\)/);
+assert.match(app, /root==='dashboard'.*return'today'/s);
+assert.match(app, /root==='tasks'.*todayContext='work'/s);
 assert.match(app, /aria-live="polite" class="insights-exceptions/);
 assert.match(app, /Import outstanding work/);
 assert.match(serviceWorker, /talentisos-v3/);

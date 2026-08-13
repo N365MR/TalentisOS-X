@@ -8,6 +8,7 @@ assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings
 assert.match(app, /function importEodToHuddle\(\)/);
 assert.match(app, /workflowKey=`eod:/);
 assert.match(app, /canonicalTitles=\[title,line/);
+assert.match(app, /candidate\.trim\(\)\.toLowerCase\(\)/);
 assert.match(app, /Moved to Today’s Work/);
 assert.match(app, /event==='Completed'/);
 assert.match(app, /function syncHuddleToToday\(\).*Moved to Today’s Work/s);

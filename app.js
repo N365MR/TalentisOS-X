@@ -78,6 +78,8 @@ mobileMenu?.setAttribute('aria-controls','primary-navigation');
 mobileMenu?.setAttribute('aria-expanded','false');
 mobileMenu?.addEventListener('click',()=>setMobileMenu(!sidebar?.classList.contains('open')));
 sidebar?.setAttribute('id','primary-navigation');
+sidebar?.setAttribute('role','navigation');
+sidebar?.setAttribute('aria-label','Primary navigation');
 sidebar?.addEventListener('click',event=>{if(event.target.closest('[data-view]'))setMobileMenu(false)});
 document.addEventListener('click',event=>{if(sidebar?.classList.contains('open')&&!sidebar.contains(event.target)&&!mobileMenu?.contains(event.target))setMobileMenu(false)});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')setMobileMenu(false)});

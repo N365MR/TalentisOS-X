@@ -12,6 +12,7 @@ assert.match(app, /event==='Completed'/);
 assert.match(app, /function syncHuddleToToday\(\).*Moved to Today’s Work/s);
 assert.match(app, /movedToTodayDate===movedDate/);
 assert.match(app, /movedToHuddleDate>movedDate/);
+assert.match(app, /canonicalNormalizeState=normalizeState/);
 assert.match(app, /aria-current=/);
 assert.match(app, /routeFromHash\(\)/);
 assert.match(app, /root==='dashboard'.*return'today'/s);

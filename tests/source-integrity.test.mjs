@@ -13,7 +13,7 @@ assert.match(app, /function syncHuddleToToday\(\).*Moved to Today’s Work/s);
 assert.match(app, /movedToTodayDate===movedDate/);
 assert.match(app, /movedToHuddleDate>movedDate/);
 assert.match(app, /canonicalNormalizeState=normalizeState/);
-assert.match(app, /syncBeforeTodayWork=unifiedTodayView/);
+assert.match(app, /syncBeforeTodayWork=unifiedTodayView.*void save\(\)/s);
 assert.match(app, /aria-current=/);
 assert.match(app, /routeFromHash\(\)/);
 assert.match(app, /root==='dashboard'.*return'today'/s);

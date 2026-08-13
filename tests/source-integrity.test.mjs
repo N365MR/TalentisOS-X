@@ -2,18 +2,20 @@ import { readFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 
 const app = await readFile(new URL('../app.js', import.meta.url), 'utf8');
+const taskEngine = await readFile(new URL('../task-engine.mjs', import.meta.url), 'utf8');
 const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
 
 assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings'/s);
+assert.match(app, /import \{ normalizeTask, moveTaskToToday \} from '\.\/task-engine\.mjs'/);
 assert.match(app, /function importEodToHuddle\(\)/);
 assert.match(app, /workflowKey=`eod:/);
 assert.match(app, /canonicalTitles=\[title,line/);
 assert.match(app, /candidate\.trim\(\)\.toLowerCase\(\)/);
 assert.match(app, /Moved to Today’s Work/);
 assert.match(app, /event==='Completed'/);
-assert.match(app, /function syncHuddleToToday\(\).*Moved to Today’s Work/s);
+assert.match(app, /function syncHuddleToToday\(\).*moveTaskToToday/s);
 assert.match(app, /movedToTodayDate===movedDate/);
-assert.match(app, /movedToHuddleDate>movedDate/);
+assert.match(taskEngine, /movedToHuddleDate>today/);
 assert.match(app, /canonicalNormalizeState=normalizeState/);
 assert.match(app, /syncBeforeTodayWork=unifiedTodayView.*void save\(\)/s);
 assert.match(app, /persistHuddleCarryOver=huddle.*void save\(\)/s);

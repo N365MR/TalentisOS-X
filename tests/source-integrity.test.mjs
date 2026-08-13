@@ -8,6 +8,7 @@ assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings
 assert.match(app, /function importEodToHuddle\(\)/);
 assert.match(app, /workflowKey=`eod:/);
 assert.match(app, /Moved to Today’s Work/);
+assert.match(app, /event==='Completed'/);
 assert.match(app, /aria-current=/);
 assert.match(app, /routeFromHash\(\)/);
 assert.match(app, /aria-live="polite" class="insights-exceptions/);

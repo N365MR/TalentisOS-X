@@ -5,6 +5,12 @@ const app = await readFile(new URL('../app.js', import.meta.url), 'utf8');
 const taskEngine = await readFile(new URL('../task-engine.js', import.meta.url), 'utf8');
 const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
 
+const declarations = [...app.matchAll(/^function ([A-Za-z0-9_$]+)\(/gm)].reduce((counts, match) => {
+  counts[match[1]] = (counts[match[1]] || 0) + 1;
+  return counts;
+}, {});
+assert.deepEqual(Object.entries(declarations).filter(([, count]) => count > 1), []);
+
 assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings'/s);
 assert.match(app, /function normalizeTask\(/);
 assert.match(app, /function moveTaskToToday\(/);

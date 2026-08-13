@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { moveTaskToToday, normalizeTask } from '../task-engine.mjs';
+import { moveTaskToToday, normalizeTask } from '../task-engine.js';
 
 const completed=normalizeTask({id:'done',title:'Closed',status:'done',createdDate:'2026-08-13'},'2026-08-14T08:00:00Z','2026-08-14');
 assert.equal(completed.source,'Manual');

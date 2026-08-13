@@ -2,12 +2,12 @@ import { readFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 
 const app = await readFile(new URL('../app.js', import.meta.url), 'utf8');
-const taskEngine = await readFile(new URL('../task-engine.mjs', import.meta.url), 'utf8');
+const taskEngine = await readFile(new URL('../task-engine.js', import.meta.url), 'utf8');
 const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
 
 assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings'/s);
 assert.match(app, /let normalizeTask, moveTaskToToday/);
-assert.match(app, /await import\('\.\/task-engine\.mjs'\)/);
+assert.match(app, /await import\('\.\/task-engine\.js'\)/);
 assert.match(app, /function importEodToHuddle\(\)/);
 assert.match(app, /workflowKey=`eod:/);
 assert.match(app, /canonicalTitles=\[title,line/);
@@ -26,8 +26,8 @@ assert.match(app, /root==='dashboard'.*return'today'/s);
 assert.match(app, /root==='tasks'.*todayContext='work'/s);
 assert.match(app, /aria-live="polite" class="insights-exceptions/);
 assert.match(app, /Import outstanding work/);
-assert.match(serviceWorker, /talentisos-v4/);
-assert.match(serviceWorker, /task-engine\.mjs/);
+assert.match(serviceWorker, /talentisos-v5/);
+assert.match(serviceWorker, /task-engine\.js/);
 assert.match(serviceWorker, /\.\/app\.js/);
 assert.match(serviceWorker, /\.\/styles\.css/);
 

@@ -1,5 +1,5 @@
-const CACHE = 'talentisos-v4';
-const ASSETS = ['./','./index.html','./TalentisOS-X.html','./styles.css','./app.js','./task-engine.mjs','./manifest.webmanifest','./icons/icon-192.svg','./icons/icon-512.svg'];
+const CACHE = 'talentisos-v5';
+const ASSETS = ['./','./index.html','./TalentisOS-X.html','./styles.css','./app.js','./task-engine.js','./manifest.webmanifest','./icons/icon-192.svg','./icons/icon-512.svg'];
 
 self.addEventListener('install', event => event.waitUntil(
   caches.open(CACHE)

@@ -1,7 +1,7 @@
 # TalentisOS Implementation Status
 
 Branch: `codex/radical-simplification`  
-Last verified: 2026-08-13
+Last verified: 2026-08-14
 
 ## Completed and published
 
@@ -15,10 +15,12 @@ Last verified: 2026-08-13
 - Preserved canonical task identity through EOD → Huddle → Today transitions.
 - Added workflow keys, carry-over history and completed-task history normalization.
 - Added source-integrity checks covering navigation, task transitions, accessibility and service-worker shell caching.
+- Removed duplicate legacy renderer declarations while preserving the final active implementations.
+- Verified primary routes, Today’s Work print control and browser startup with no console errors.
 
 ## Current safety boundary
 
-The app still contains multiple historical renderer definitions in `app.js`. They are currently protected by a canonical route boundary and compatibility aliases. They should not be deleted in bulk until browser workflow fixtures cover:
+The app still contains compatibility aliases and historical event handlers in `app.js`. They should not be removed in bulk until browser workflow fixtures cover:
 
 - Restore backup → incomplete EOD items appear in Morning Huddle and Today’s Work
 - EOD → Morning Huddle → Today’s Work without duplicate task identities
@@ -26,11 +28,10 @@ The app still contains multiple historical renderer definitions in `app.js`. The
 - Print Today’s Work
 - Hash navigation and browser back/forward behavior
 
-## Next implementation phase
+## Remaining validation
 
-1. Extract pure task-engine migration and transition helpers into a testable module.
-2. Add fixture-based tests for import, carry-over, completion and restore behavior.
-3. Remove one obsolete renderer family at a time, starting with the legacy Dashboard renderer.
-4. Run responsive and browser interaction checks after each deletion boundary.
+1. Add fixture-based tests for import, carry-over, completion and restore behavior.
+2. Run responsive browser checks at mobile and desktop breakpoints.
+3. Validate print output and service-worker upgrade behavior on the hosted build.
 
 The guiding rule remains: reduce implementation duplication without reducing leadership workflow capability.

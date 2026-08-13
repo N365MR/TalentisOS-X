@@ -12,3 +12,9 @@ export function moveTaskToToday(task,today,at=new Date().toISOString()){
   const history=Array.isArray(task.history)?task.history:[];
   return {task:{...task,movedToTodayAt:at,movedToTodayDate:today,committedDate:today,lastUpdated:at,source:"Today's Work",history:history.some(event=>event.event==='Moved to Today’s Work'&&event.date===today)?history:[...history,{at,date:today,event:'Moved to Today’s Work'}]},moved:true};
 }
+
+export function matchesCanonicalTask(task,candidates=[]){
+  if(task.status==='done')return false;
+  const title=String(task.title||'').trim().toLowerCase();
+  return candidates.some(candidate=>candidate&&String(candidate).trim().toLowerCase()===title);
+}

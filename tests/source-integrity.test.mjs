@@ -26,7 +26,8 @@ assert.match(app, /root==='dashboard'.*return'today'/s);
 assert.match(app, /root==='tasks'.*todayContext='work'/s);
 assert.match(app, /aria-live="polite" class="insights-exceptions/);
 assert.match(app, /Import outstanding work/);
-assert.match(serviceWorker, /talentisos-v3/);
+assert.match(serviceWorker, /talentisos-v4/);
+assert.match(serviceWorker, /task-engine\.mjs/);
 assert.match(serviceWorker, /\.\/app\.js/);
 assert.match(serviceWorker, /\.\/styles\.css/);
 

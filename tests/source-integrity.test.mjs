@@ -6,7 +6,7 @@ const taskEngine = await readFile(new URL('../task-engine.mjs', import.meta.url)
 const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
 
 assert.match(app, /const navItems=\[\['today'.*'meetings'.*'insights'.*'settings'/s);
-assert.match(app, /import \{ normalizeTask, moveTaskToToday, matchesCanonicalTask \} from '\.\/task-engine\.mjs'/);
+assert.match(app, /import \{ normalizeTask, moveTaskToToday \} from '\.\/task-engine\.mjs'/);
 assert.match(app, /function importEodToHuddle\(\)/);
 assert.match(app, /workflowKey=`eod:/);
 assert.match(app, /canonicalTitles=\[title,line/);

@@ -38,6 +38,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
 .card{background:var(--surface);border:1px solid #1d2834;border-radius:var(--radius);padding:20px}
 .contextual-link{color:var(--text);font:inherit;text-align:left;cursor:pointer;transition:transform .22s ease,border-color .22s ease,background-color .22s ease}.contextual-link:hover{transform:translateY(-2px);border-color:var(--teal);background:var(--elevated)}.contextual-link p{margin-bottom:0}
+.insights-exceptions{margin-bottom:18px;padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}.insights-exceptions.has-exceptions{border-color:color-mix(in srgb,var(--warning) 48%,var(--border))}.insights-exceptions .card-head{margin-bottom:8px}.insights-exceptions .status-row{width:100%;border:0;border-top:1px solid var(--border);border-radius:0;padding:14px 0;background:transparent}.insights-exceptions .status-row:hover{transform:none;background:color-mix(in srgb,var(--surface) 75%,var(--warning) 8%)}
 .span-3{grid-column:span 3}
 .span-4{grid-column:span 4}
 .span-5{grid-column:span 5}

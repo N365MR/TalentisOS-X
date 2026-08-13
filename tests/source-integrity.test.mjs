@@ -12,6 +12,7 @@ assert.match(app, /event==='Completed'/);
 assert.match(app, /aria-current=/);
 assert.match(app, /routeFromHash\(\)/);
 assert.match(app, /aria-live="polite" class="insights-exceptions/);
+assert.match(app, /Import outstanding work/);
 assert.match(serviceWorker, /talentisos-v3/);
 assert.match(serviceWorker, /\.\/app\.js/);
 assert.match(serviceWorker, /\.\/styles\.css/);

@@ -22,6 +22,7 @@ Run the dependency-free checks before publishing changes:
 node --check app.js
 node --check sw.js
 node tests/source-integrity.test.mjs
+node tests/task-engine.test.mjs
 git diff --check
 ```
 

@@ -202,3 +202,4 @@ function insightsHomeView(){const kpiExceptions=state.kpis.filter(k=>kpiStatus(k
 // Canonical route boundary: compatibility renderers above remain available for legacy aliases,
 // while the public shell below owns Today, Meetings and Insights.
 const canonicalNavigationRender=render;render=()=>{if(current==='meetings'){document.querySelector('#view').innerHTML=meetingsHomeView();layout();bind();return}if(current==='insights'){document.querySelector('#view').innerHTML=insightsHomeView();layout();bind();return}canonicalNavigationRender()};
+const accessibleInsightsHome=insightsHomeView;insightsHomeView=()=>accessibleInsightsHome().replace('<section class="insights-exceptions','<section aria-live="polite" class="insights-exceptions');
